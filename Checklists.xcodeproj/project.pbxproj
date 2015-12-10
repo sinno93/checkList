@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF7E6D601C19824F002E9F78 /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E6D5F1C19824F002E9F78 /* ChecklistItem.m */; settings = {ASSET_TAGS = (); }; };
 		BFBC80F21C02D3C50048139E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC80F11C02D3C50048139E /* main.m */; };
 		BFBC80F51C02D3C50048139E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC80F41C02D3C50048139E /* AppDelegate.m */; };
 		BFBC80F81C02D3C50048139E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC80F71C02D3C50048139E /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF7E6D5E1C19824F002E9F78 /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItem.h; sourceTree = "<group>"; };
+		BF7E6D5F1C19824F002E9F78 /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItem.m; sourceTree = "<group>"; };
 		BFBC80ED1C02D3C50048139E /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBC80F11C02D3C50048139E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFBC80F31C02D3C50048139E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				BFBC80FE1C02D3C50048139E /* LaunchScreen.storyboard */,
 				BFBC81011C02D3C50048139E /* Info.plist */,
 				BFBC80F01C02D3C50048139E /* Supporting Files */,
+				BF7E6D5E1C19824F002E9F78 /* ChecklistItem.h */,
+				BF7E6D5F1C19824F002E9F78 /* ChecklistItem.m */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				BFBC80F81C02D3C50048139E /* ViewController.m in Sources */,
 				BFBC80F51C02D3C50048139E /* AppDelegate.m in Sources */,
 				BFBC80F21C02D3C50048139E /* main.m in Sources */,
+				BF7E6D601C19824F002E9F78 /* ChecklistItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
