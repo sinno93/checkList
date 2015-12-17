@@ -62,40 +62,42 @@
     // Dispose of any resources that can be recreated.
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return [_items count];
 }
--(void)configureCheckmarkForCell:(UITableViewCell*)cell atIndexPath:(NSIndexPath *)indexPath{
-    if([[_items objectAtIndex:indexPath.row] checked]){
+// 更新checkmark函数
+-(void)configureCheckmarkForCell:(UITableViewCell*)cell withChecklistItem:(ChecklistItem *)item{
+    if(item.checked){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }else{
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
-    UILabel *label = (UILabel*)[cell viewWithTag:1993];
-    label.text = [[_items objectAtIndex:indexPath.row] text];
+    
     
 }
+-(void)configureTextForCell:(UITableViewCell*)cell withChecklistItem:(ChecklistItem *)item{
+    UILabel *label = (UILabel*)[cell viewWithTag:1993];
+    label.text = item.text;
+    
+}
+ // 获取cell的函数
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    // 获取可重用的cell
     UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:@"ChecklistItemxx"];
-    [self configureCheckmarkForCell:cell atIndexPath:indexPath];
+    ChecklistItem * item = _items[indexPath.row];
+    // 更新checkmark
+    [self configureCheckmarkForCell:cell withChecklistItem:item];
+    [self configureTextForCell:cell withChecklistItem:item];
+    // 更新label
+    
     return cell;
 }
+// 选择(点击)一行数据时 处理函数
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
-//    if(indexPath.row == 0){
-//        _row0item.checked = !_row0item.checked;
-//    }else if(indexPath.row == 1){
-//        _row1item.checked = !_row1item.checked;
-//    }else if(indexPath.row == 2){
-//        _row2item.checked = !_row2item.checked;
-//    }else if(indexPath.row == 3){
-//        _row3item.checked = !_row3item.checked;
-//    }else if(indexPath.row == 4){
-//        _row4item.checked = !_row4item.checked;
-//    }
-    [_items[indexPath.row] setChecked:![_items[indexPath.row] checked]];
-    [self configureCheckmarkForCell:cell atIndexPath:indexPath];
+    ChecklistItem * item = _items[indexPath.row];
+    [item toggleCheckMark];
+    [self configureCheckmarkForCell:cell withChecklistItem:item];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 @end

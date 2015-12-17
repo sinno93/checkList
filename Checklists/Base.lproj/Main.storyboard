@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Lnt-Uh-aLZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eNi-Gd-Uds">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--checklist-->
         <scene sceneID="Cfj-S7-6T0">
             <objects>
                 <tableViewController id="Lnt-Uh-aLZ" customClass="ViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItemxx" id="n7J-3T-SV0">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n7J-3T-SV0" id="1fX-Bb-lP7">
                                     <rect key="frame" x="0.0" y="0.0" width="281" height="43"/>
@@ -35,8 +35,27 @@
                             <outlet property="delegate" destination="Lnt-Uh-aLZ" id="N3z-0E-Z1Y"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="checklist" id="MqG-d2-wvi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRi-6k-o0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621" y="251"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sPQ-e6-OoB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eNi-Gd-Uds" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGY-Zc-Bws">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lnt-Uh-aLZ" kind="relationship" relationship="rootViewController" id="Ruu-gg-HS3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7u-Kf-O5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="89" y="251"/>
         </scene>
