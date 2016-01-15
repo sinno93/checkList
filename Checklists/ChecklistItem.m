@@ -12,4 +12,20 @@
 - (void)toggleCheckMark{
     self.checked = !self.checked;
 }
+
+// 实现NSCoding 协议中的encodeWithCoder:(NSCoder*);
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:self.text forKey:@"ItemText"];
+    [aCoder encodeBool:self.checked forKey:@"Checked"];
+}
+// 实现NSCoding 协议中的initWithCoder
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    
+    if((self =[super init]))
+    {
+        self.text = [aDecoder decodeObjectForKey:@"ItemText"];
+        self.checked = [aDecoder decodeBoolForKey:@"Checked"];
+    }
+    return self;
+}
 @end

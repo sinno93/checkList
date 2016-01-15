@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ZExceptionHandler.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 设置异常处理函数
+    NSLog(@"完成登录。。。");
+    [ZExceptionHandler setDefaultHandler];
     return YES;
 }
 

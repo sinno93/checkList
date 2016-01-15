@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF18C87E1C297BAD00872358 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF18C87D1C297BAD00872358 /* ItemDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BF402ABA1C30E70000FE6DB8 /* ZExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BF402AB91C30E70000FE6DB8 /* ZExceptionHandler.m */; settings = {ASSET_TAGS = (); }; };
 		BF7E6D601C19824F002E9F78 /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E6D5F1C19824F002E9F78 /* ChecklistItem.m */; settings = {ASSET_TAGS = (); }; };
 		BFBC80F21C02D3C50048139E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC80F11C02D3C50048139E /* main.m */; };
 		BFBC80F51C02D3C50048139E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC80F41C02D3C50048139E /* AppDelegate.m */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF18C87C1C297BAD00872358 /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
+		BF18C87D1C297BAD00872358 /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
+		BF402AB81C30E70000FE6DB8 /* ZExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZExceptionHandler.h; sourceTree = "<group>"; };
+		BF402AB91C30E70000FE6DB8 /* ZExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZExceptionHandler.m; sourceTree = "<group>"; };
 		BF7E6D5E1C19824F002E9F78 /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItem.h; sourceTree = "<group>"; };
 		BF7E6D5F1C19824F002E9F78 /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItem.m; sourceTree = "<group>"; };
 		BFBC80ED1C02D3C50048139E /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +51,10 @@
 		BFBC80E41C02D3C50048139E = {
 			isa = PBXGroup;
 			children = (
+				BF402AB81C30E70000FE6DB8 /* ZExceptionHandler.h */,
+				BF402AB91C30E70000FE6DB8 /* ZExceptionHandler.m */,
+				BF18C87C1C297BAD00872358 /* ItemDetailViewController.h */,
+				BF18C87D1C297BAD00872358 /* ItemDetailViewController.m */,
 				BFBC80EF1C02D3C50048139E /* Checklists */,
 				BFBC80EE1C02D3C50048139E /* Products */,
 			);
@@ -115,6 +125,7 @@
 				TargetAttributes = {
 					BFBC80EC1C02D3C50048139E = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 7454Q79LXB;
 					};
 				};
 			};
@@ -157,6 +168,8 @@
 				BFBC80F81C02D3C50048139E /* ViewController.m in Sources */,
 				BFBC80F51C02D3C50048139E /* AppDelegate.m in Sources */,
 				BFBC80F21C02D3C50048139E /* main.m in Sources */,
+				BF402ABA1C30E70000FE6DB8 /* ZExceptionHandler.m in Sources */,
+				BF18C87E1C297BAD00872358 /* ItemDetailViewController.m in Sources */,
 				BF7E6D601C19824F002E9F78 /* ChecklistItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +235,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -258,6 +272,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -267,10 +282,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Checklists/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sf.Checklists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -278,10 +298,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Checklists/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sf.Checklists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
