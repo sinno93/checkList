@@ -1,0 +1,16 @@
+info.txt
+ [paramsDic setObject:@"659792" forKey:@"account"];
+                                      #else
+                                      [paramsDic setObject:username forKey:@"account"];
+                                      #endif
+                                      [paramsDic setObject:@"d0f0e645a710e919901fda410b7df7ea" forKey:@"appkey"];
+                                      [paramsDic setObject:@"63560b42e510" forKey:@"appsecret"];
+                                      if (error == nil)
+                                      {
+                                          [[NSUserDefaults standardUserDefaults]setObject:username forKey:@"SFAccount"];
+                                       
+                                      // http://10.118.13.70:8880/fsserver/userpermdata.do
+                                      //stg:  //http://218.17.248.245:38082/fsserver/userpermdata.do
+                                          
+                                          [SFNetConnection requestWithUrl:@"http://218.17.248.245:38082/fsserver/userpermdata.do" parmas:paramsDic method:@"post" finshed:^(id response) {
+                                              NSDictionary * resDic=response;
