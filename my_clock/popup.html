@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" >
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+html{
+	width:300px;
+	height:400px;
+	background:white;
+}
+body {
+    width: 300px;
+    height: 400px;
+    background: #171f26 url('images/bg.png') bottom;
+    background-position:top center;
+   overflow:hidden;
+   position:relative;
+}
+
+div {
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+input{
+	display: block;
+}
+.login-div{
+	background:beige;
+	width:200px;
+	height:200px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top:-100px;
+	margin-left:-100px;
+}
+#workNumber{
+
+}
+</style>
+</head>
+<body >
+<div class="login-div">
+<input type="text" id="workNumber" placeholder="请输入工号" />
+<input type="password" id="passWord" placeholder="请输入密码" />
+<input type="button" value="点击登录" id="loginButton" />
+</div>
+<div id="ip_div" style="display:none">正在查询……</div>
+<div id="lt_div">查询中...</div>
+<!-- <script src="js/my_clock.js"></script> -->
+</body>
+</html>

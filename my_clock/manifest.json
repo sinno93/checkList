@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "letscas",
+    "version": "1.0",
+    "description": "快速进行cas登录",
+    "icons": {
+        "16": "images/icon16.jpg",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.jpg"
+        },
+        "default_title": "一键cas",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "https://mcas.sf-express.com/*",
+        "http://cas.sf-express.com/*"
+    ]
+}
